@@ -1,0 +1,4 @@
+Commands to run
+
+kind create cluster --config kind-config.yaml
+kubectl apply -f namespace.yaml -f deployment.yaml -f service.yaml
