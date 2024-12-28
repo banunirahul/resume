@@ -1,0 +1,11 @@
+apiVersion: kind.x-k8s.io/v1alpha4
+kind: Cluster
+name: resume-cluster
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      - containerPort: 30080  # Internal port for NodePort service
+        hostPort: 8080         # Port on EC2 instance
+        protocol: TCP
+  - role: worker
+  - role: worker
